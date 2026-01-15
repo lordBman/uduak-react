@@ -1,13 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import ErrorPage from './pages/error';
-import HomePage from './pages/home';
-import AdminPage from './pages/admin';
-import NotFoundPage from './pages/notfound';
-import UnAuthPage from './pages/unauth';
+import ErrorPage from './screens/error';
+import HomePage from './screens/home';
+import AdminPage from './screens/admin';
+import NotFoundPage from './screens/notfound';
+import UnAuthPage from './screens/unauth';
 
-const router = createBrowserRouter([
+const pages = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
@@ -32,6 +32,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={pages} />
   </StrictMode>,
 )
